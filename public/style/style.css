@@ -75,19 +75,14 @@ body {
     text-align: center;
     font-family: 'Roboto Slab', serif;
 
+
 }
 
-#IntroText {
-    position: absolute;
-    top:35%;
-    left:28%;
-    color:white;
-}
+.nameIntro {
 
-#IntroText h1{
     color: white;
-    font-size: 8em;
 }
+
 
 #IntroLogo{
     position: absolute;
