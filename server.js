@@ -34,7 +34,7 @@ let transporter = nodemailer.createTransport({
     service:'gmail',
     auth: {
         user:'moisesmigueledu@gmail.com',
-        pass:'Vd7510qqq'
+        pass:process.env.EMAIL_PASSWORD
     }
 });//end of transporter
 
@@ -42,8 +42,8 @@ app.post('/', (req, res) => {
     let mailer = req.body;
 
     client.messages.create({
-        to:'9522209630',
-        from:'7633249718',
+        to:process.env.MY_NUMBER,
+        from:process.env.TWILIO_NUMBER,
         body:mailer.message + " ---->" + mailer.email
     }, function(err, data) {
         if (err) {
